@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Apparel - Promotions</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .promotions-content {
+            padding: 20px;
+            text-align: center;
+            background-color: black; /* Matching background color */
+            color: black; /* Text color */
+            min-height: calc(100vh - 100px); /* Full screen minus header and footer height */
+            box-sizing: border-box;
+            margin: 0; /* Remove default margin */
+        }
+        .promotion {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-column-gap: 15px; /* Slightly smaller gap */
+            align-items: center;
+            margin-bottom: 20px; /* Reduced margin for a bit smaller spacing */
+            background-color: whitesmoke; /* Background color for each promotion */
+            padding: 15px; /* Reduced padding */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Make sure it uses full width of its container */
+            box-sizing: border-box; /* Include padding and border in element’s total width and height */
+        }
+        .promotion img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px; /* Rounded corners for images */
+        }
+        .promotion h2 {
+            margin: 0 0 10px;
+        }
+        .promotion p {
+            margin: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #080808;
+            color: white;
+        }
+        #boxwrapper {
+            display: flex; /* Use flexbox to handle the layout */
+            flex-direction: row;
+        }
+        #side1 {
+            flex: 1; /* Sidebar */
+        }
+        #side2 {
+            flex: 3; /* Main content */
+        }
+    </style>
+</head>
+<body>
+    <div class="background full-screen">
+        <div class="wrapper full-screen">
+            <div class="header">
+                <div class="logo">
+                    <img width="110" height="30" src="logo.png" alt="Logo">
+                </div>
+                <div class="navigation">
+                    <a href="index.html"><b>Home</b></a>
+                    <a href="products.html"><b>Products</b></a>
+                    <a href="menu.html"><b>Menu</b></a>
+                    <a href="promotions.html"><b>Promotions</b></a>
+                    <a href="about.html"><b>About Us</b></a>
+                </div>
+            </div>
+            <button id="sidebar-toggle" aria-label="Toggle Sidebar">&#9776;</button>
+            <div id="boxwrapper">
+                <div id="side1" class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="sidebar-item"><a href="men.html">Men</a></div>
+                        <div class="sidebar-item"><a href="women.html">Women</a></div>
+                        <div class="sidebar-item"><a href="brand.html">Brand</a></div>
+                        <div class="sidebar-item"><a href="goods.html">Goods</a></div>
+                        <div class="sidebar-item"><a href="rewards.html">Rewards</a></div>
+                    </div>
+                </div>
+                <div id="side2" class="main-content">
+                    <div class="promotions-content">
+                        <h1>Our Current Promotions</h1>
+                        <div class="promotion">
+                            <img src="https://i.pinimg.com/564x/18/a4/9f/18a49f35bab36eac45d8f5f7a931294d.jpg" alt="Summer Clearance Sale">
+                            <div>
+                                <h2>Summer Clearance Sale</h2>
+                                <p>Enjoy up to 50% off on selected items!</p>
+                                <p>Valid until August 31, 2024.</p>
+                            </div>
+                        </div>
+                        <div class="promotion">
+                            <img src="https://i.pinimg.com/564x/32/97/83/3297830d51e20faeadf13b021ef00821.jpg" alt="Back-to-School Special">
+                            <div>
+                                <h2>Back-to-School Special</h2>
+                                <p>Get 20% off on all backpacks and school essentials.</p>
+                                <p>Offer ends September 15, 2024.</p>
+                            </div>
+                        </div>
+                        <div class="promotion">
+                            <img src="https://i.pinimg.com/564x/61/ff/d9/61ffd930f2c63e46f541a564fafe4063.jpg" alt="Back-to-School Special">
+                            <div>
+                                <h2>One-day Sale</h2>
+                                <p>Get 30% off on all items in our store.</p>
+                                <p>Offer starts on November 18, 2024 only.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <img width="110" height="30" src="logo.png" alt="Logo">
+                <p><i>Alexa Mhel V. Gagan <br> 202310537@fit.edu.ph</i></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

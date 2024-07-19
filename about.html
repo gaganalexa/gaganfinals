@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Apparel - About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-content {
+            padding: 20px;
+            text-align: center;
+            background-color: black; /* Matching background color */
+            color: white; /* Text color */
+        }
+        .about-content h1 {
+            margin-bottom: 20px;
+        }
+        .about-content p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .about-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .about-content .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .about-content .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .about-content .team-member h3 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background full-screen">
+        <div class="wrapper full-screen">
+            <div class="header">
+                <div class="logo">
+                    <img width="110" height="30" src="logo.png" alt="Logo">
+                </div>
+                <div class="navigation">
+                    <a href="index.html"><b>Home</b></a>
+                    <a href="products.html"><b>Products</b></a>
+                    <a href="menu.html"><b>Menu</b></a>
+                    <a href="promotions.html"><b>Promotions</b></a>
+                    <a href="about.html"><b>About Us</b></a>
+                </div>
+            </div>
+            <button id="sidebar-toggle" aria-label="Toggle Sidebar">&#9776;</button>
+            <div id="boxwrapper">
+                <div id="side1" class="sidebar">
+                    <div class="sidebar-content">
+                        <div class="sidebar-item"><a href="men.html">Men</a></div>
+                        <div class="sidebar-item"><a href="women.html">Women</a></div>
+                        <div class="sidebar-item"><a href="brand.html">Brand</a></div>
+                        <div class="sidebar-item"><a href="goods.html">Goods</a></div>
+                        <div class="sidebar-item"><a href="rewards.html">Rewards</a></div>
+                    </div>
+                </div>
+                <div id="side2" class="main-content">
+                    <div class="about-content">
+                        <h1>About Us</h1>
+                        <p>Welcome to Urban Apparel! We are a fashion brand committed to providing the latest trends and high-quality clothing for every occasion. Our mission is to offer stylish, affordable, and sustainable apparel that makes our customers feel confident and empowered.</p>
+                        <p>Founded in 2024, Urban Apparel has quickly become a go-to destination for fashion enthusiasts. Our team of dedicated professionals works tirelessly to curate collections that reflect both contemporary trends and timeless classics.</p>
+                        <img src="https://i.pinimg.com/564x/c2/bd/6b/c2bd6b4e82f6fb0902b15bed87853bd9.jpg" alt="Our Team">
+                        <p>Meet the team behind Urban Apparel:</p>
+                        <div class="team-member">
+                            <img src="https://edith.feutech.edu.ph/briefcase/assets/images/avatars/T2023/OR-T202310537.png" alt="Team Member 1">
+                            <h3>Alexa Mhel Gagan</h3>
+                            <p>Co-Founder & CEO</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="ash.jpg" alt="Team Member 2">
+                            <h3>Hilary Ashley Pagadora</h3>
+                            <p>Co-Founder & Creative Director</p>
+                        </div>
+                        <div class="team-member">
+                            <img src="mica.jpg" alt="Team Member 3">
+                            <h3>Mica Gonzales</h3>
+                            <p>Head of Marketing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <img width="110" height="30" src="logo.png" alt="Logo">
+                <p><i><font color="white">Alexa Mhel V. Gagan <br> 202310537@fit.edu.ph</font></i></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

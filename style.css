@@ -1,0 +1,250 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #080808;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #080808;
+    flex-shrink: 0;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+}
+
+.navigation a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    transition: all 0.3s ease;
+}
+
+.navigation a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    transform: translateY(-5px);
+}
+
+.header-banner {
+    text-align: center;
+    padding: 0;
+    background: url('header.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: top;
+    flex-shrink: 0;
+    height: 430px;
+    padding-bottom: 20px;
+    background-color: black; 
+}
+
+#boxwrapper {
+    display: flex;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+}
+
+#side1 {
+    width: 25%;
+    background-color: whitesmoke; /* Sidebar background color */
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+#side1.show {
+    transform: translateX(0);
+}
+
+#sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: white; /* Button background color */
+    color: black; /* Button text color */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2;
+}
+
+#sidebar-toggle:hover {
+    background-color: black; /* Optional: Button hover background color */
+    color: white; /* Optional: Button hover text color */
+}
+
+.main-content {
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: margin-left 0.3s ease;
+}
+
+#side1.show ~ .main-content {
+    margin-left: 25%; /* Leave space for the sidebar */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+    transform: translateX(0); /* Ensure it is visible by default */
+    z-index: 1; /* Ensure it is above other elements */
+}
+
+.sidebar-content {
+    width: 100%;
+}
+
+.sidebar-item {
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    line-height: 40px; /* Leading between lines */
+}
+
+.sidebar-item a {
+    text-decoration: none;
+    color: black; /* Sidebar text color by default */
+    display: block;
+    padding: 10px;
+}
+
+.sidebar-item:hover {
+    transform: translateY(-5px);
+    background-color: black; /* Black box behind text on hover */
+}
+
+.sidebar-item a:hover {
+    color: white; /* Text color on hover */
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center boxes horizontally */
+    padding-top: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.box {
+    width: calc(30% - 20px); /* Adjust width for three items per row */
+    background-color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Ensure link text remains black and bold */
+a {
+    color: black; /* Set link color to black */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold; /* Make text bold */
+}
+
+/* Optional: Add hover styles for better user experience */
+a:hover {
+    color: #333; /* Slightly darker black for hover effect */
+}
+
+/* Styles for boxes */
+.box {
+    display: block; /* Ensure the entire box is clickable */
+    margin-bottom: 20px; /* Add some space between boxes */
+}
+
+.box img {
+    width: 100%; /* Make sure the image fits the box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners for images */
+}
+
+.box .desc {
+    margin-top: 10px;
+}
+
+.desc {
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #080808;
+    flex-shrink: 0;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #080808;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box {
+        width: calc(45% - 20px); /* Adjust for smaller screens */
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        width: calc(90% - 20px); /* Full width on very small screens */
+        margin: 10px;
+    }
+}
